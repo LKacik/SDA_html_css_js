@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5</title>
+
+    <!-- dodajemy plik CSS -->
+    <!-- href: wzgledny / bezwzgledny -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- dodajemy fonty -->
+  </head>
+  <body>
+    <header>
+      <div id="logo"></div>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Strona główna</a>
+          </li>
+          <li>
+            <a href="omnie.html">O mnie</a>
+          </li>
+          <li>
+            <a href="galeria.html">Galeria</a>
+          </li>
+          <li>
+            <a href="kontakt.html">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Kontakt</h1>
+
+      <article>
+        <!-- <form action="#" method="post">
+         "spięcie" label z input otrzymujemy po podaniu takiej samej wartości dla atrybutów "for" oraz "id"
+          <label for="firstName">
+            Imię:
+            <input
+              type="text"
+              name="imie"
+              id="firstName"
+              required
+              minlength="3"
+              maxlength="15"
+              placeholder="np. Kuba"
+              value="Jakub"
+            />
+          </label>
+          <br />
+          <label for="lastName">
+            Nazwisko: <input type="text" name="nazwisko" id="lastName" />
+          </label>
+          <br />
+          <label for="email">
+            Email: <input type="email" name="email" id="email" required />
+          </label>
+          <br />
+
+          <label for="file">
+            Plik:
+            <input
+              type="file"
+              name="file"
+              id="file"
+              multiple
+              accept="image/png, image/jpeg"
+            />
+          </label>
+
+          <input type="date" name="" id="" />
+          <br />
+          <input type="color" name="" id="" />
+          <br />
+          <input type="password" name="" id="" />
+          <br />
+          <input type="range" name="" id="" value="10" min="1" max="15" />
+          <br />
+          <input type="reset" value="reset" />
+
+          <br />
+
+          <label for="ch1">
+            Jazz:
+            <input type="checkbox" name="jazz" id="ch1" checked />
+          </label>
+
+          <p>Co pijesz?</p>
+
+          <label for="yerba">
+            Yerba:
+            <input type="radio" name="drink" id="yerba" checked />
+          </label>
+
+          <label for="kawa">
+            Kawa:
+            <input type="radio" name="drink" id="kawa" />
+          </label>
+
+          <label for="herbata">
+            Herbata:
+            <input type="radio" name="drink" id="herbata" />
+          </label>
+
+          <select name="sport" id="sport">
+            <option value="koszykowka">koszykówka</option>
+            <option value="siatkowka">siatkówka</option>
+            <option value="pilkanozna">piłka nożna</option>
+            <option value="f1">f1</option>
+            <option value="baseball">baseball</option>
+            <option value="squash">squash</option>
+          </select>
+
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          znaczniki pojedyncze koncza sie "/>"
+          <input type="submit" value="Wyślij" />
+        </form> -->
+
+        <!-- Zbuduj formularz kontaktowy -->
+        <!-- 
+            Pola formularza: 
+            Imie, Nazwisko* - text
+            Mail* - email
+            Wiadomość* - textarea
+            Wiek - number (max, min)
+            Kategoria: radio (min. 3 opcje)
+            Zainteresowania: checkboxy (min. 4)
+            Buttony: submit i reset
+
+            dodaj placeholdery do wszystkich pol wejsciowych
+        -->
+        <form action="#" method="POST">
+        <label for="name">
+          Imie <span class="required">*</span>:
+          <input type="text" name="name" id="name" placeholder="Jan"/>
+        </label>
+        <br />
+        <label for="lastName">
+          Nazwisko <span class="required">*</span>:
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            required
+            placeholder="np. Kowalski"
+          />
+        </label>
+        <br />
+        <label for="email">
+          Email <span class="required">*</span>:
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="np. jakub@wp.pl"
+          />
+        </label>
+        <br />
+        <label for="message">
+          Wiadomość <span class="required">*</span>:
+          <br />
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Opisz swoją sprawę"
+            required
+          ></textarea>
+        </label>
+        <br>
+        <label for="age">
+            Wiek <span class="required">*</span>:
+            <input type="number" min="1" max="99" name="age" id="age" placeholder="33">
+        </label>
+        <br>
+        <p>Kategorie?</p>
+        <label for="sport">
+          Sport:
+          <input type="radio" name="category" id="sport" />
+        </label>
+        <label for="music">
+          Muzyka:
+          <input type="radio" name="category" id="music" />
+        </label>
+        <label for="game">
+          Gry:
+          <input type="radio" name="category" id="game" />
+        </label>
+        <br>
+        <p>Zainteresowania?</p>
+        <label for="ch1">
+            Python:
+            <input type="checkbox" name="python" id="ch1" />
+          </label>
+          <label for="ch2">
+            JavaScript:
+            <input type="checkbox" name="javaScript" id="ch2" />
+          </label>
+          <label for="ch3">
+            C++:
+            <input type="checkbox" name="cPlusPlus" id="ch3" />
+          </label>
+          <label for="ch4">
+            Basic:
+            <input type="checkbox" name="basic" id="ch4" />
+          </label>
+          <br>
+          <input type="submit" value="Wyślij" />
+          <input type="reset" value="Reset" />
+        </form>
+      </article>
+    </main>
+    <footer>
+      <!-- encja -->
+      <p>&copy; by LK</p>
+    </footer>
+  </body>
+</html>
