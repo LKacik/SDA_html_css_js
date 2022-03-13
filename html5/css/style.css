@@ -1,0 +1,14 @@
+/* importujemy font z google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+
+/* ustawiamy font na elemencie <html> */
+/* font-family i font-size sa dziedziczone przez elementy potomne */
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: azure;
+}
